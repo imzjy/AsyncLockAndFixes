@@ -52,6 +52,10 @@ namespace AsyncLockAndFixes
             //fix 1: WindowsFormsSynchronizationContext.SetSynchronizationContext(syncContext);
 
             var first50 = result.Substring(0, 50);
+
+            //WHY AUTO CAPTURE? capture the synchronization context makes following accessing UI control became possible.
+            //textBox1.Text = first50;
+
             return first50;
 
 
